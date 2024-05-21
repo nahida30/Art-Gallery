@@ -1,0 +1,137 @@
+.mySlides {display: none;}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+.slide-body {
+    display: flex;
+    /* background: #E3E3E3; */
+    background-image: url("/images/circle.png");
+    background-repeat: no-repeat;
+    margin-top: -150px;
+    height: 100vh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.slide-body h1{
+    margin-top: 100px;
+}
+
+.slide-body h1, .slide-body h2{
+    text-align: center;
+}
+
+/* set scroll animation */
+/* RULES: calc(${width of slide-item + margin left + margin right}px * ${total slide-item}) */
+@keyframes scroll-left {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(calc(-280px * 4)); }
+}
+
+@keyframes scroll-right {
+    0% { transform: translateX(calc(-280px * 4)); }
+    100% { transform: translateX(0); }
+}
+
+.slider {
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+    width: 960px; /* You can adjust or delete this line */
+}
+
+/* RULES: calc(${width of slide-item + margin left + margin right}px * ${(total slide)*2}) */
+.slide-track {
+    display: flex;
+    width: calc(280px * 8);
+}
+
+.slide-track.left{
+    animation: scroll-left 12s linear infinite; /* You can set the time to any number of seconds */
+}
+
+.slide-track.right{
+    animation: scroll-right 12s linear infinite; /* You can set the time to any number of seconds */
+}
+
+.slide-track:hover {
+    animation-play-state: paused;
+}
+
+.slide-item {
+    width: 250px;
+    margin: 15px;
+    border-radius: 10px;
+    transition: transform 0.5s, box-shadow 0.5s; /* Added transition for smooth effect */
+}
+
+.slide-item:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+    box-shadow: 0 10px 5px -5px rgba(0, 0, 0, 0.678);
+}
+
+@media only screen and (max-width: 600px) {
+    .slider{
+        width: 100vw;
+    }
+  }
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
+}

@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Art Gallery</title>
+
+    <!-- link of tailwind css and daisy ui  -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.11.1/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- css link  -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- navbar starts  -->
+    <div class="navbar bg-white flex justify-evenly lg:fixed lg:z-40 ...">
+        <div>
+          <div class="dropdown">
+            <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
+            </div>
+            <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+              <li><a>Item 1</a></li>
+              <li>
+                <a>Parent</a>
+                <ul class="p-2">
+                  <li><a>Submenu 1</a></li>
+                  <li><a>Submenu 2</a></li>
+                </ul>
+              </li>
+              <li><a>Item 3</a></li>
+            </ul>
+          </div>
+          <!-- <a class="btn btn-ghost text-xl">Art Gallery</a> -->
+          <img src="/images/logo.png" alt="art-gallery" class="w-20 h-20">
+        </div>
+        <div class="navbar-end hidden lg:flex lg:gap-10">
+          <ul class="menu menu-horizontal px-1 text-xl ">
+            <li><a>Artists</a></li>
+            <li><a>Art Works</a></li>
+            <li><a>Events</a></li>
+            <li><a>About</a></li>
+            <li><a>Documentation</a></li>
+            <!-- <li><a>Contact Us</a></li> -->
+            <button class="w-32 h-10 bg-black rounded-3xl text-white">Contact Us</button>
+          </ul>
+
+
+
+               <!-- modal  -->
+              <!-- Open the modal using ID.showModal() method -->
+<button onclick="my_modal_2.showModal()"><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" /></svg></button>
+<dialog id="my_modal_2" class="modal">
+  <div class="modal-box  bg-transparent outline-none border-none shadow-none">
+    <h3 class="text-5xl text-center mb-5 text-white">Search <span class="font-bold">The Website</span></h3>
+    <label class="input input-bordered flex items-center gap-2">
+        <input type="text" class="grow" placeholder="Search" />
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="w-4 h-4 opacity-70"><path fill-rule="evenodd" d="M9.965 11.026a5 5 0 1 1 1.06-1.06l2.755 2.754a.75.75 0 1 1-1.06 1.06l-2.755-2.754ZM10.5 7a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0Z" clip-rule="evenodd" /></svg>
+      </label>
+  </div>
+  <form method="dialog" class="modal-backdrop">
+    <button>close</button>
+  </form>
+</dialog>
+        </div>
+        <div>
+          
+
+         
+        </div>
+      </div>
+
+    <!-- navbar ends  -->
+
+    <!-- hero section starts  -->
+    <div class="hero min-h-screen bg-transparent bg-base-200 z-30 ...">
+        <div class="hero-content flex-col lg:flex-row-reverse">
+            <div>
+                <div class="slideshow-container ">
+
+                    <div class="mySlides fade">
+                      <img src="/images/hero1.jpg" class="w-96 h-96 rounded-tr-[100px] ...">
+                    </div>
+                    
+                    <div class="mySlides fade">
+                      <img src="/images/hero2.jpg" class="w-96 h-96 rounded-tr-[100px] ...">
+                     
+                    </div>
+                    
+                    <div class="mySlides fade">
+                      <!-- <div class="numbertext">3 / 3</div> -->
+                      <img src="/images/hero3.jpg" class="w-96 h-96 rounded-tr-[100px] ...">
+                      <!-- <div class="text">Caption Three</div> -->
+                      
+                    </div>
+
+                    
+                    
+                    </div>
+                    <br>
+                    
+                    <div style="text-align:center; ">
+                      <span class="dot"></span> 
+                      <span class="dot"></span> 
+                      <span class="dot"></span> 
+                    </div>
+
+            </div>
+           
+          <div>
+            <h1 class="lg:text-[75px] lg:font-bold lg:w-[80%] lg:font-poetsen-one-regular ... lg:text-right">modern art <br> <span class="font-thin">at your doorstep</span></h1>
+            
+          </div>
+        </div>
+      </div>
+
+    <!-- hero section ends  -->
+
+    <!-- all artists starts  -->
+ <div>
+   
+    
+    <div class="slide-body z-30 ...">
+        <h1 class="text-5xl font-thin">highlight <span class="font-semibold">Artists</span> </h1>
+        <p class="w-[50%] text-center mt-5 text-gray-500">Remember that your art has the power to evoke emotions, provoke thoughts, and inspire others. Your work contributes to the rich tapestry of human creativity and expression.</p>
+        
+        <div class="slider">
+            <div class="slide-track left" id="slide-track">
+            </div>
+        </div>
+        
+    </div>
+ </div>
+
+    <!-- all artists ends  -->
+<!-- show off your strength starts -->
+<div class="hero min-h-screen bg-transparent">
+    <div class="hero-content flex-col lg:flex-row">
+      <img src="/images/img.png" class="max-w-sm rounded-bl-[100px] ..." />
+      <div class="w-[50%] ml-20">
+        <h1 class="lg:text-7xl lg:font-thin ">show off <br><span class="font-bold"> your strengths</span></h1>
+        <p class="py-6 text-gray-500 lg:text-lg">Your strengths are the foundation of your creative journey, empowering you to bring unique visions to life. Your creativity allows you to think outside the box and generate original ideas, setting you apart in the art world. Fueled by a deep passion for your craft, you persist and innovate with each piece you create. Your keen observation skills enable you to capture the world in remarkable detail, while your technical expertise lets you execute your visions with precision. </p>        
+      </div>
+    </div>
+  </div>
+<!-- show off your strength ends  -->
+
+<!-- feature next event starts  -->
+<div class="hero min-h-screen bg-transparent">
+    
+      <div class="lg:mt-[-500px] lg:text-center">
+        <h1 class="lg:text-5xl lg:font-thin">feature <span class="font-bold">next events</span></h1>
+        <p class="py-6 text-gray-500 lg:text-lg lg:w-[70%] lg:mx-auto">We are thrilled to announce an exciting lineup of events at our gallery in the coming months. Join us for a series of inspiring exhibitions, workshops, and artist talks that celebrate creativity and innovation.</p>        
+      </div>
+
+      <div class="grid grid-cols-3 gap-5 mt-10">
+        <!-- 1st card  -->
+        <div class="relative w-96 image-full group">
+            <figure>
+                <img src="/images/event1.jpg" alt="event1" class="w-full h-full object-cover rounded-lg" />
+            </figure>
+           
+        </div>
+        
+        
+          <!-- 2nd card  -->
+          <div class="relative w-96 image-full group">
+            <figure>
+                <img src="/images/event2.jpg" alt="event1" class="w-full h-96 object-cover rounded-lg" />
+            </figure>
+           
+        </div>
+
+          <!-- 3rd card  -->
+          <div class="relative w-96 image-full group">
+            <figure>
+                <img src="/images/event3.jpg" alt="event1" class="w-full h-96 object-cover rounded-lg" />
+            </figure>
+           
+        </div>
+
+    
+
+        
+      </div>
+    </div>
+  
+
+<!-- feature next event ends  -->
+
+<!-- interest in our work starts -->
+<div>
+    <h1 class="lg:text-5xl lg:font-thin text-center">interested in <span class="font-bold">our work?</span></h1>
+    <p class="py-6 text-gray-500 lg:text-lg lg:w-[70%] lg:text-center lg:mx-auto">Visiting an art gallery is not just about admiring beautiful artworks; it's an immersive experience that can ignite your imagination, evoke emotions, and broaden your perspective. As you step into the gallery space, you're welcomed into a world where creativity knows no bounds.</p>
+    <button class="w-40 h-12 bg-pink-800 text-white rounded-full lg:mx-[44%]">Contact Us</button>
+
+</div>
+<!-- interest in our work ends -->
+
+<!-- footer  -->
+<footer class="footer p-20 bg-base-200 text-base-content lg:mt-10">
+    <nav>
+      <h6 class="footer-title">Services</h6> 
+      <a class="link link-hover">Branding</a>
+      <a class="link link-hover">Design</a>
+      <a class="link link-hover">Marketing</a>
+      <a class="link link-hover">Advertisement</a>
+    </nav> 
+    <nav>
+      <h6 class="footer-title">Company</h6> 
+      <a class="link link-hover">About us</a>
+      <a class="link link-hover">Contact</a>
+      <a class="link link-hover">Jobs</a>
+      <a class="link link-hover">Press kit</a>
+    </nav> 
+    <nav>
+      <h6 class="footer-title">Legal</h6> 
+      <a class="link link-hover">Terms of use</a>
+      <a class="link link-hover">Privacy policy</a>
+      <a class="link link-hover">Cookie policy</a>
+    </nav> 
+    <form>
+      <h6 class="footer-title">Newsletter</h6> 
+      <fieldset class="form-control w-80">
+        <label class="label">
+          <span class="label-text">Enter your email address</span>
+        </label> 
+        <div class="join">
+          <input type="text" placeholder="username@site.com" class="input input-bordered join-item" /> 
+          <button class="btn btn-primary join-item">Subscribe</button>
+        </div>
+      </fieldset>
+    </form>
+
+    
+  </footer>
+  <footer class="footer footer-center p-4 bg-base-300 text-base-content">
+    <aside>
+      <p>Copyright © 2024 - All right reserved by Art Gallery</p>
+    </aside>
+  </footer>
+
+
+    <!-- script starts -->
+    <script>
+        let slideIndex = 0;
+        showSlides();
+        
+        function showSlides() {
+          let i;
+          let slides = document.getElementsByClassName("mySlides");
+          let dots = document.getElementsByClassName("dot");
+          for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";  
+          }
+          slideIndex++;
+          if (slideIndex > slides.length) {slideIndex = 1}    
+          for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+          }
+          slides[slideIndex-1].style.display = "block";  
+          dots[slideIndex-1].className += " active";
+          setTimeout(showSlides, 2000); // Change image every 2 seconds
+        }
+        </script>
+
+        <script src="script.js"></script>
+
+    <!-- script ends  -->
+    
+</body>
+</html>
